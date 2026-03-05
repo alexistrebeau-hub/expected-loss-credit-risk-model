@@ -1,4 +1,4 @@
-# Credit Risk Modeling — Expected Loss Framework
+# Expected Loss Credit Risk Model (PD × LGD × EAD)
 
 This project develops a forward-looking credit risk modeling framework using the LendingClub consumer loan dataset. The goal is to estimate portfolio credit risk using the standard banking expected loss equation:
 
@@ -10,7 +10,7 @@ Where:
 - **LGD (Loss Given Default)** estimates the portion of exposure lost if default occurs  
 - **EAD (Exposure at Default)** represents the loan exposure  
 
-The framework integrates machine learning models with financial risk modeling techniques to evaluate portfolio credit risk.
+The framework integrates machine learning models with traditional financial risk modeling techniques to estimate portfolio-level credit risk.
 
 ---
 
@@ -74,6 +74,32 @@ A **logistic regression model** predicts borrower default risk using borrower fi
 The model demonstrates **reasonable discriminatory power** for consumer credit data.
 
 ---
+
+# Model Results
+
+## ROC Curve
+
+![ROC Curve](reports/figures/roc_curve.png)
+
+The ROC curve evaluates the model’s ability to distinguish between defaulting and non-defaulting loans.
+
+---
+
+## Distribution of Predicted Default Probabilities
+
+![PD Distribution](reports/figures/pd_distribution.png)
+
+The distribution of predicted PD values shows that most borrowers fall into lower risk categories, with a smaller tail of higher risk loans.
+
+---
+
+## Expected Loss by Credit Grade
+
+![Expected Loss by Grade](reports/figures/expected_loss_by_grade.png)
+
+Expected loss increases significantly from Grade A to Grade G, confirming that the model captures the relationship between credit quality and portfolio risk.
+
+-- 
 
 # 2️⃣ Loss Given Default (LGD)
 
@@ -213,3 +239,46 @@ Development environment:
 
 # Repository Structure
 
+```markdown
+
+expected-loss-model
+│
+├── notebooks
+│   └── 01_eda.ipynb
+│
+├── reports
+│   └── figures
+│
+├── src
+│
+├── data
+│   └── raw
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+# Project Takeaways
+
+This project demonstrates how machine learning models can be integrated with financial risk modeling techniques to estimate portfolio credit risk.
+
+The framework replicates the core methodology used in banking risk management, combining probability modeling, loss severity estimation, and portfolio-level analysis.
+
+---
+
+# Author
+
+**Alexis Trebeau**
+
+Statistics & Data Science Student  
+University of North Carolina at Chapel Hill
+
+Interested in:
+- Credit Risk Modeling
+- Financial Data Science
+- Risk Analytics
+- FinTech
+
+GitHub: https://github.com/alexistrebeau-hub
