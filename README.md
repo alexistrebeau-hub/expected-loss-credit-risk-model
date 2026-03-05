@@ -1,5 +1,10 @@
 # Expected Loss Credit Risk Model (PD × LGD × EAD)
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 This project develops a forward-looking credit risk modeling framework using the LendingClub consumer loan dataset. The goal is to estimate portfolio credit risk using the standard banking expected loss equation:
 
 Expected Loss = PD × LGD × EAD
